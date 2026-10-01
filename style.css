@@ -1,0 +1,172 @@
+/* Простые стили для списка дел. Без фреймворков. */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f0f2f5;
+  color: #333;
+}
+
+/* Белая карточка по центру */
+.container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 24px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  margin: 0;
+  text-align: center;
+  font-size: 28px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #888;
+  margin: 6px 0 20px;
+  font-size: 14px;
+}
+
+/* Поле ввода и кнопка в один ряд */
+.input-row {
+  display: flex;
+  gap: 8px;
+}
+
+#taskInput {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+#taskInput:focus {
+  outline: 2px solid #4a90e2;
+  border-color: #4a90e2;
+}
+
+#addBtn {
+  padding: 10px 18px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background: #4a90e2;
+  color: #fff;
+  cursor: pointer;
+}
+
+#addBtn:hover {
+  background: #357abd;
+}
+
+/* Кнопки фильтра */
+.filters {
+  display: flex;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.filters button {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #f7f7f7;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Подсветка активного фильтра */
+.filters button.active {
+  background: #4a90e2;
+  color: #fff;
+  border-color: #4a90e2;
+}
+
+/* Список задач */
+#taskList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#taskList li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+#taskList li.done span {
+  text-decoration: line-through;
+  color: #999;
+}
+
+#taskList span {
+  flex: 1;
+  word-break: break-word;
+}
+
+.delete-btn {
+  border: none;
+  background: #ff5a5a;
+  color: #fff;
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: #d94444;
+}
+
+/* Нижняя панель */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+#clearBtn {
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+#clearBtn:hover {
+  background: #eee;
+}
+
+/* Сообщение "пусто" */
+.empty {
+  text-align: center;
+  color: #999;
+  padding: 20px 0;
+}
+
+/* Адаптивность для телефона */
+@media (max-width: 560px) {
+  .container {
+    margin: 0;
+    border-radius: 0;
+    min-height: 100vh;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

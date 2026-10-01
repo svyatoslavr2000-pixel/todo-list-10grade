@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мой список дел</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Мой список дел</h1>
+    <p class="subtitle">Школьный проект, 10 класс</p>
+
+    <!-- Строка ввода новой задачи -->
+    <div class="input-row">
+      <input id="taskInput" type="text" placeholder="Новая задача..." maxlength="100">
+      <button id="addBtn" type="button">Добавить</button>
+    </div>
+
+    <!-- Кнопки фильтра -->
+    <div class="filters">
+      <button data-filter="all" class="active" type="button">Все</button>
+      <button data-filter="active" type="button">Активные</button>
+      <button data-filter="done" type="button">Выполненные</button>
+    </div>
+
+    <!-- Сюда JavaScript добавит задачи -->
+    <ul id="taskList"></ul>
+
+    <!-- Нижняя панель: счетчик и очистка -->
+    <div class="footer">
+      <span id="counter">Осталось: 0</span>
+      <button id="clearBtn" type="button">Очистить выполненные</button>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
